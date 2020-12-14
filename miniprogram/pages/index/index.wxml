@@ -54,6 +54,18 @@
       <text>云调用</text>
     </navigator>
   </view>
-
+  <!-- 跳转 -->
+  <view class="uploader">
+    <navigator url="../jump/jump" open-type="navigate" class="uploader-text">
+      <text>Doki</text>
+    </navigator>
+  </view>
+  <view id="navbar" class="navbar-collapse collapse">
+    <form class="navbar-form navbar-right">
+      <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;" url="../jump/jump">
+        <span>Doki</span>
+      </navigator>
+    </form>
+  </view>
 
 </view>
