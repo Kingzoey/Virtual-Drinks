@@ -3,13 +3,8 @@
 
   <!-- 用户 openid -->
   <view class="userinfo">
-    <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
-      class="userinfo-avatar"
-      style="background-image: url({{avatarUrl}})"
-      size="default"
-    ></button>
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})" size="default"></button>
     <view class="userinfo-nickname-wrapper">
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
@@ -60,6 +55,19 @@
       <text>Doki</text>
     </navigator>
   </view>
+  <!-- 购物车结算 -->
+  <view class="uploader">
+    <navigator url="../cart/cart" open-type="navigate" class="uploader-text">
+      <text>🛒</text>
+    </navigator>
+  </view>
+  <!-- 展示页 -->
+  <view class="uploader">
+    <navigator url="../show/show" open-type="navigate" class="uploader-text">
+      <text>Show</text>
+    </navigator>
+  </view>
+  <!-- 跳转按钮页 -->
   <view id="navbar" class="navbar-collapse collapse">
     <form class="navbar-form navbar-right">
       <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;" url="../jump/jump">

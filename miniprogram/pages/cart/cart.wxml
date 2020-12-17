@@ -1,0 +1,32 @@
+<!--jump.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="startbutton">
+    <button class="tostart">
+    </button>
+  </view>
+  <navigator url="#">
+  </navigator>
+  <view id="navbar" class="navbar-collapse collapse">
+    <form class="navbar-form navbar-right">
+      <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;" url="../index/index" redirect>
+        <span>Doki</span>
+      </navigator>
+    </form>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="test-button">
+    <button type="primary" bindtouchstart="mytouchstart" bindtouchmove="mytouchmove" >购物车</button>
+  </view>
+  <view class="test-text">
+    <text class="user-emoji">🦁</text>
+  </view>
+</view>
