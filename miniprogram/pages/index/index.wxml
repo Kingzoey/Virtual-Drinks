@@ -1,6 +1,13 @@
 <!--index.wxml-->
 <view class="container">
 
+<!-- 主页 -->
+    <view class="uploader">
+      <navigator url="../jump/jump" open-type="navigate" class="uploader-text">
+      <text>主页Home</text>
+    </navigator>
+  </view>
+
   <!-- 用户 openid -->
   <view class="userinfo">
     <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar"
@@ -49,24 +56,7 @@
       <text>云调用</text>
     </navigator>
   </view>
-  <!-- 跳转 -->
-  <view class="uploader">
-    <navigator url="../jump/jump" open-type="navigate" class="uploader-text">
-      <text>Doki</text>
-    </navigator>
-  </view>
-  <!-- 购物车结算 -->
-  <view class="uploader">
-    <navigator url="../cart/cart" open-type="navigate" class="uploader-text">
-      <text>🛒</text>
-    </navigator>
-  </view>
-  <!-- 展示页 -->
-  <view class="uploader">
-    <navigator url="../show/show" open-type="navigate" class="uploader-text">
-      <text>Show</text>
-    </navigator>
-  </view>
+
   <!-- 跳转按钮页 -->
   <view id="navbar" class="navbar-collapse collapse">
     <form class="navbar-form navbar-right">
