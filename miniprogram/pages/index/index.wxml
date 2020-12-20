@@ -67,13 +67,24 @@
       <text>Show</text>
     </navigator>
   </view>
-  <!-- 跳转按钮页 -->
-  <view id="navbar" class="navbar-collapse collapse">
+  <!-- 测试意见反馈页 -->
+  <view class="uploader">
+    <navigator url="../ask/ask" open-type="navigate" class="uploader-text">
+      <text>意见反馈</text>
+    </navigator>
+  </view>
+  <!-- 测试意见反馈页2 -->
+  <view class="uploader">
+    <navigator url="../askme/askme" open-type="navigate" class="uploader-text">
+      <text>意见反馈2</text>
+    </navigator>
+  </view>
+    <!-- 跳转按钮页 -->
+    <view id="navbar" class="navbar-collapse collapse">
     <form class="navbar-form navbar-right">
       <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;" url="../jump/jump">
         <span>Doki</span>
       </navigator>
     </form>
   </view>
-
 </view>
