@@ -53,7 +53,7 @@
 
   <!-- 跳转按钮页 -->
   <view id="navbar" class="navbar-collapse collapse">
-    </view>>
+    </view>
   <!-- 跳转 -->
   <view class="uploader">
     <navigator url="../jump/jump" open-type="navigate" class="uploader-text">
