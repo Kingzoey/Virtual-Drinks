@@ -1,4 +1,5 @@
 <!--index.wxml-->
+
 <view class="container">
 
   <!-- 用户 openid -->
@@ -49,29 +50,18 @@
       <text>云调用</text>
     </navigator>
   </view>
-<<<<<<< HEAD
 
   <!-- 跳转按钮页 -->
   <view id="navbar" class="navbar-collapse collapse">
-=======
+    </view>>
   <!-- 跳转 -->
   <view class="uploader">
     <navigator url="../jump/jump" open-type="navigate" class="uploader-text">
       <text>Doki</text>
     </navigator>
   </view>
-  <!-- 购物车结算 -->
-  <view class="uploader">
-    <navigator url="../cart/cart" open-type="navigate" class="uploader-text">
-      <text>🛒</text>
-    </navigator>
-  </view>
-  <!-- 展示页 -->
-  <view class="uploader">
-    <navigator url="../show/show" open-type="navigate" class="uploader-text">
-      <text>Show</text>
-    </navigator>
-  </view>
+
+
   <!-- 测试意见反馈页 -->
   <view class="uploader">
     <navigator url="../ask/ask" open-type="navigate" class="uploader-text">
@@ -86,7 +76,6 @@
   </view>
     <!-- 跳转按钮页 -->
     <view id="navbar" class="navbar-collapse collapse">
->>>>>>> master
     <form class="navbar-form navbar-right">
       <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;" url="../jump/jump">
         <span>Doki</span>

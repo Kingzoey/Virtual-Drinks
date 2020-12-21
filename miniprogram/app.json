@@ -14,16 +14,10 @@
     "pages/im/im",
     "pages/im/room/room",
     "pages/jump/jump",
-<<<<<<< HEAD
-    "pages/users/users"
- ],
-=======
-    "pages/cart/cart",
-    "pages/show/show",
+    "pages/users/users",
     "pages/ask/ask",
     "pages/askme/askme"
   ],
->>>>>>> master
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
