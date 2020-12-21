@@ -16,7 +16,8 @@
     "pages/jump/jump",
     "pages/users/users",
     "pages/ask/ask",
-    "pages/askme/askme"
+    "pages/askme/askme",
+    "pages/changeGoodsInfo/changeGoodsInfo"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -28,31 +29,32 @@
   "sitemapLocation": "sitemap.json",
   "style": "v2",
   "useExtendedLib": {
-      "weui": true
-    },
-
-    "tabBar": {
-      "color": "#a9b7b7",
-      "selectedColor": "#11cd6e",
-      "borderStyle":"white",
-      "list": [{
+    "weui": true
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
         "selectedIconPath": "images/home2.png",
         "iconPath": "images/home.png",
         "pagePath": "pages/index/index",
         "text": "首页"
-      }, {
+      },
+      {
         "selectedIconPath": "images/food2.png",
         "iconPath": "images/food.png",
         "pagePath": "pages/jump/jump",
         "text": "点餐"
-      }, {
+      },
+      {
         "selectedIconPath": "images/user2.png",
         "iconPath": "images/user.png",
         "pagePath": "pages/users/users",
         "text": "我的"
-      }]
-    },
-  "usingComponents": {
-    }
-
+      }
+    ]
+  },
+  "usingComponents": {}
 }
