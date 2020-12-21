@@ -5,14 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        this.setData({id : res.result.openid})
+        console.log('[云函数] [login] user openid: ', this.data.id)
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+        wx.navigateTo({
+          url: '../deployFunctions/deployFunctions',
+        })
+      }
+    })
   },
 
   /**
@@ -62,5 +75,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+
+  /**
+   * 跳转购物车
+   * 
+   */
+  goShopCart:function() {
+    wx.navigateTo({
+      url: '../jump/jump',
+    })
   }
 })

@@ -1,5 +1,7 @@
 //index.js
 const app = getApp()
+// 获取云数据库示例
+const db = wx.cloud.database()
 
 Page({
   data: {
@@ -7,7 +9,9 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    userId : 0,
+    admin:false
   },
 
   onLoad: function() {
@@ -27,13 +31,15 @@ Page({
             success: res => {
               this.setData({
                 avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
+                userInfo: res.userInfo,
               })
             }
           })
         }
       }
     })
+
+    this.addUserInfo()
   },
 
   onGetUserInfo: function(e) {
@@ -64,6 +70,17 @@ Page({
           url: '../deployFunctions/deployFunctions',
         })
       }
+    })
+  },
+  
+  addUserInfo:function() {
+    if (db.collection) {
+      
+    }
+    db.collection('users').add({
+      data:{
+        admin:this.data.admin,
+      },
     })
   },
 

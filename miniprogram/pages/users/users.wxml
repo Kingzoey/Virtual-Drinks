@@ -1,6 +1,56 @@
-<view class="userinfo">
-  <view class="userinfo-avatar">
-    <open-data type="userAvatarUrl"></open-data>
+<view class = "container">
+
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+      <open-data type="userNickName"></open-data>
   </view>
-    <open-data type="userNickName"></open-data>
+<!-- 购物车 -->
+  <view class="uploader">
+    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+      <text>查看购物车</text>
+    </navigator>
+  </view>
+
+ <!-- 进行中订单 -->
+  <view class="uploader">
+    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+      <text>进行中订单</text>
+    </navigator>
+  </view>
+
 </view>
+  <wxs module="m1">
+    var judgeID = function (id) {
+      if (id == "oI5iK5I3iFyzdchd_UV2Cw7YRlno") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    module.exports.ID = judgeID
+  </wxs>
+
+  <view wx:if="{{m1.ID(id)}}">
+    <!-- 更新商品请求 -->
+    <view class="uploader">
+      <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
+        <text>更新商品请求(商家功能)</text>
+      </navigator>
+    </view>
+  
+    <!-- 编辑商品信息 -->
+    <view class="uploader">
+      <navigator url="../changeGoodsInfo/changeGoodsInfo" open-type="navigate" class="uploader-text">
+        <text>修改商品信息(商家功能)</text>
+      </navigator>
+    </view>
+  </view>
+
+
+
+
+
+
+
