@@ -1,13 +1,6 @@
 <!--index.wxml-->
 <view class="container">
 
-<!-- 主页 -->
-    <view class="uploader">
-      <navigator url="../jump/jump" open-type="navigate" class="uploader-text">
-      <text>主页Home</text>
-    </navigator>
-  </view>
-
   <!-- 用户 openid -->
   <view class="userinfo">
     <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar"
