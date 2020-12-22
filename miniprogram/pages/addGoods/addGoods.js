@@ -130,11 +130,18 @@ Page({
         })
         setTimeout(function () {
           wx.hideLoading()
-          wx.showToast({
-            title: '发布成功!',
+          wx.showModal({
+            title: '提示',
+            content: '发布商品成功!',
+            success (res) {
+              if (res.confirm) {
+                console.log('用户点击确定')
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
           })
         }, 3000)
-
       }
     })
   },
@@ -184,6 +191,11 @@ Page({
 
   addImgToDB(){
     const filePath = this.data.filesUrl[0]
+    if(filePath == "") {
+      this.setData({
+        error:'未上传图片!'
+      })
+    }
     const tempFile = filePath.split(',')
     const cloudPath = 'goods-img-'+this.data.goodsName+tempFile[tempFile.length-2]
     console.log(filePath)

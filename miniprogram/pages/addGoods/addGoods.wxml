@@ -8,7 +8,7 @@
   </view>
   <!-- 商品信息输入 -->
   <view class="page_goodsinfo">
-    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}" >
       <mp-cells title="商品信息" footer="联系管理员更新模型">
 
         <!-- 商品名称 -->
@@ -55,7 +55,7 @@
         
       <!-- 发布按钮 -->
       <view class="weui-btn-area">
-        <button class="weui-btn" type="primary" bindtap="submitForm">确定发布</button>
+        <button class="weui-btn" type="primary" bindtap="submitForm" >确定发布</button>
       </view>
 
     </mp-form>
