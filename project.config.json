@@ -62,6 +62,18 @@
         {
           "name": "pages/newIndex/newIndex",
           "pathName": "pages/newIndex/newIndex",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "修改商品信息",
+          "pathName": "pages/changeGoodsInfo/changeGoodsInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的界面",
+          "pathName": "pages/users/users",
           "scene": null
         }
       ]

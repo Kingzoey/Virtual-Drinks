@@ -17,7 +17,8 @@
     "pages/users/users",
     "pages/ask/ask",
     "pages/askme/askme",
-    "pages/changeGoodsInfo/changeGoodsInfo"
+    "pages/changeGoodsInfo/changeGoodsInfo",
+    "pages/addGoods/addGoods"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -31,6 +32,7 @@
   "useExtendedLib": {
     "weui": true
   },
+  "component":true,
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
@@ -56,5 +58,13 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-checkbox": "weui-miniprogram/checkbox/checkbox",
+    "mp-checkbox-group": "weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-form": "weui-miniprogram/form/form"
+  }
 }

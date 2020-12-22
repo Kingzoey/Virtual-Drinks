@@ -20,4 +20,17 @@
   border: 2px solid #fff;  
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
 }  
+
+.orderCart {
+  width: 100%;
+  line-height: 52px;
+  font-size: 30rpx;
+  color: #007aff;
+}
   
+.shop {
+  width: 100%;
+  line-height: 52px;
+  font-size: 30rpx;
+  color: #5bacd1;
+}
