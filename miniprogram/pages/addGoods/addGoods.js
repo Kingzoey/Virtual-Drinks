@@ -11,6 +11,7 @@ Page({
     goodsComponents: "",
     goodsType: "",
     goodsInfo: "",
+    imgID:"",
 
     types: ["饮品", "菜品", "主食"],
     typeIndex: 0,
@@ -100,7 +101,8 @@ Page({
         goodsPrice: this.data.goodsPrice,
         goodsComponents: this.data.goodsComponents,
         goodsInfo: this.data.goodsInfo,
-        goodsType: this.data.types[this.data.typeIndex]
+        goodsType: this.data.types[this.data.typeIndex],
+        imgID:this.data.imgID
       },
       success: res => {
         console.log(res)
@@ -174,10 +176,6 @@ Page({
       that.setData({
         filesUrl: tempFilePaths
       })
-      const filePath = this.data.filesUrl[0]
-      const cloudPath = 'goods-img-'+filePath.match(/\.[^.]+?$/)[0]
-      console.log(filePath)
-      console.log(cloudPath)
       var object = {};
       object['urls'] = tempFilePaths;
       resolve(object);
@@ -193,17 +191,24 @@ Page({
 
   addImgToDB(){
     const filePath = this.data.filesUrl[0]
-    const cloudPath = 'goods-img-'+this.data.goodsName+filePath.match(/\.[^.]+?$/)[0]
+    const tempFile = filePath.split(',')
+    const cloudPath = 'goods-img-'+this.data.goodsName+tempFile[tempFile.length-2]
     console.log(filePath)
     console.log(cloudPath)
     wx.cloud.uploadFile({
       cloudPath,
       filePath,
       success:res=>{
-        console.log('sss')
-        wx.showToast({
-          title: '图片成功！',
-        })
+        this.setData({
+          imgID : res.fileID
+        });
+        setTimeout(function(){
+                that.setData({
+                   buttondisplay: 'none',
+                   playerdisplay: 'block'
+                })        
+             }, 2000);
+        console.log(this.data.imgID)
       }
     })
    }
