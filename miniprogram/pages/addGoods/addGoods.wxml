@@ -13,17 +13,17 @@
 
         <!-- 商品名称 -->
         <mp-cell prop="goodsname" title="商品名称" ext-class="page_goodsinfo">
-          <input bindinput="formInputChange" data-field="goodsname" class="weui-input" placeholder="请输入商品名称" />
+          <input bindinput="getGoodsName" data-field="goodsname" class="weui-input" placeholder="请输入商品名称" />
         </mp-cell>
 
         <!-- 商品价格 -->
         <mp-cell prop="price" title="商品价格" ext-class="">
-          <input bindinput="formInputChange" data-field="price" class="weui-input" placeholder="请输入商品价格" />
+          <input bindinput="getGoodsPrice" data-field="price" class="weui-input" placeholder="请输入商品价格" />
         </mp-cell>
 
         <!-- 商品配料成分 -->
         <mp-cell prop="content" title="配料成分" ext-class="">
-          <input bindinput="formInputChange" data-field="content" class="weui-input" placeholder="请输入商品的配料成分" />
+          <input bindinput="getGoodsComponents" data-field="content" class="weui-input" placeholder="请输入商品的配料成分" />
         </mp-cell>
 
         <!-- 选择 商品类别 -->
@@ -33,17 +33,25 @@
           </picker>
         </mp-cell>
 
-        <!-- 商品详情 -->
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell">
-            <view class="weui-cell__bd">
-              <textarea class="weui-textarea" placeholder="请输入商品简介" style="height: 3.3em" />
-              <view class="weui-textarea-counter">0/200</view>
+        <!-- 上传图片 -->
+        <mp-cell>
+          <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}"
+            upload="{{uploadFile}}" files="{{files}}" max-count="5" title="图片上传" tips="上传商品图片"></mp-uploader>
+        </mp-cell>
+
+      </mp-cells>
+      <!-- 商品详情 -->
+      <view class="page_title">商品简介</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea bindblur="getGoodsInfo" value="{{goodsInfo}}" class="weui-textarea" placeholder="请输入商品简介" style="height: 3.3em" />
+            <view class="weui-textarea-counter">0/200</view>
                 </view>
             </view>
         </view>
-      </mp-cells>
 
+        
       <!-- 发布按钮 -->
       <view class="weui-btn-area">
         <button class="weui-btn" type="primary" bindtap="submitForm">确定发布</button>

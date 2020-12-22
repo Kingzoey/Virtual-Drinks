@@ -1,5 +1,5 @@
 /* miniprogram/pages/addGoods/addGoods.wxss */
 .page_title{
-  font-size: 35px;
-  margin-left: 20px;
+  font-size: 18px;
+  margin-left: 16px;
 }
