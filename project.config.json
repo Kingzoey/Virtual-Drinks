@@ -74,6 +74,12 @@
         {
           "name": "我的界面",
           "pathName": "pages/users/users",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布新商品",
+          "pathName": "pages/addGoods/addGoods",
           "scene": null
         }
       ]
