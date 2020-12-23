@@ -66,6 +66,8 @@
     "mp-checkbox": "weui-miniprogram/checkbox/checkbox",
     "mp-checkbox-group": "weui-miniprogram/checkbox-group/checkbox-group",
     "mp-form": "weui-miniprogram/form/form",
-    "mp-uploader": "weui-miniprogram/uploader/uploader"
+    "mp-uploader": "weui-miniprogram/uploader/uploader",
+    "mp-slideview": "weui-miniprogram/slideview/slideview",
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar"
   }
 }
