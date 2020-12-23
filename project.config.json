@@ -38,7 +38,7 @@
   },
   "appid": "wx166e694ba70638d4",
   "projectname": "Virtual-Drinks",
-  "libVersion": "2.8.1",
+  "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
