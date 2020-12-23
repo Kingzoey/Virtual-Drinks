@@ -51,7 +51,7 @@ Page({
     }, ]
   },
   // 表单输入检测并获取到 formData
-  getGoodsName(e) {
+  getGoodsName:function (e) {
     const {
       field
     } = e.currentTarget.dataset
@@ -60,7 +60,7 @@ Page({
       goodsName: e.detail.value
     })
   },
-  getGoodsPrice(e) {
+  getGoodsPrice: function(e) {
     const {
       field
     } = e.currentTarget.dataset
@@ -69,7 +69,7 @@ Page({
       goodsPrice: e.detail.value
     })
   },
-  getGoodsComponents(e) {
+  getGoodsComponents:function(e) {
     const {
       field
     } = e.currentTarget.dataset
@@ -94,7 +94,7 @@ Page({
   },
 
   //上传数据库？
-  addToDB() {
+  addToDB:function() {
     db.collection('goods').add({
       data: {
         goodsName: this.data.goodsName,
@@ -111,7 +111,7 @@ Page({
   },
 
   // 点击按钮 提交表单
-  submitForm() {
+  submitForm:function() {
     this.selectComponent('#form').validate((valid, errors) => {
       console.log('valid', valid, errors)
       if (!valid) {
@@ -168,12 +168,12 @@ Page({
       urls: this.data.files // 需要预览的图片http链接列表
     })
   },
-  selectFile(files) {
+  selectFile:function(files) {
     console.log('files', files)
     // 返回false可以阻止某次文件上传
   },
 
-  uplaodFile(files) {
+  uplaodFile:function(files) {
     console.log('upload files', files);
     var that = this;
     // 文件上传的函数，返回一个promise
@@ -188,14 +188,14 @@ Page({
     })
   },
 
-  uploadError(e) {
+  uploadError:function(e) {
     console.log('upload error', e.detail)
   },
-  uploadSuccess(e) {
+  uploadSuccess:function(e) {
     console.log('upload success', e.detail)
   },
 
-  addImgToDB() {
+  addImgToDB:function() {
     const filePath = this.data.filesUrl[0]
     const tempFile = filePath.split(',')
     const cloudPath = 'goods-img-' + this.data.goodsName + tempFile[tempFile.length - 2]
