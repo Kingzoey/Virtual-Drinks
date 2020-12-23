@@ -11,7 +11,7 @@ Page({
     goodsComponents: "",
     goodsType: "",
     goodsInfo: "",
-    imgID:"",
+    imgID: "",
 
     types: ["饮品", "菜品", "主食"],
     typeIndex: 0,
@@ -22,7 +22,7 @@ Page({
 
 
     files: [],
-    filesUrl:"",
+    filesUrl: "",
 
     rules: [{
       name: "goodsname",
@@ -102,10 +102,10 @@ Page({
         goodsComponents: this.data.goodsComponents,
         goodsInfo: this.data.goodsInfo,
         goodsType: this.data.types[this.data.typeIndex],
-        imgID:this.data.imgID
+        imgID: this.data.imgID
       },
       success: res => {
-        console.log(res)
+        console.log(this.data.imgID)
       }
     })
   },
@@ -124,24 +124,30 @@ Page({
         }
       } else {
         this.addImgToDB()
-        this.addToDB()
-        wx.showLoading({
-          title: '写入数据库',
-        })
-        setTimeout(function () {
-          wx.hideLoading()
-          wx.showModal({
-            title: '提示',
-            content: '发布商品成功!',
-            success (res) {
-              if (res.confirm) {
-                console.log('用户点击确定')
-              } else if (res.cancel) {
-                console.log('用户点击取消')
-              }
-            }
+        if (this.data.imgID == "") {
+          this.setData({
+            error: '图片上传失败!请重试'
           })
-        }, 3000)
+        } else {
+          this.addToDB()
+          wx.showLoading({
+            title: '写入数据库',
+          })
+          setTimeout(function () {
+            wx.hideLoading()
+            wx.showModal({
+              title: '提示',
+              content: '发布商品成功!',
+              success(res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                }
+              }
+            })
+          }, 2000)
+        }
       }
     })
   },
@@ -189,21 +195,21 @@ Page({
     console.log('upload success', e.detail)
   },
 
-  addImgToDB(){
+  addImgToDB() {
     const filePath = this.data.filesUrl[0]
     const tempFile = filePath.split(',')
-    const cloudPath = 'goods-img-'+this.data.goodsName+tempFile[tempFile.length-2]
+    const cloudPath = 'goods-img-' + this.data.goodsName + tempFile[tempFile.length - 2]
     console.log(filePath)
     console.log(cloudPath)
     wx.cloud.uploadFile({
       cloudPath,
       filePath,
-      success:res=>{
+      success: res => {
         this.setData({
-          imgID : res.fileID
+          imgID: res.fileID
         })
         console.log(this.data.imgID)
       }
     })
-   }
+  }
 })
