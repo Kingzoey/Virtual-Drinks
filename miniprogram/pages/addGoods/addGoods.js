@@ -191,11 +191,6 @@ Page({
 
   addImgToDB(){
     const filePath = this.data.filesUrl[0]
-    if(filePath == "") {
-      this.setData({
-        error:'未上传图片!'
-      })
-    }
     const tempFile = filePath.split(',')
     const cloudPath = 'goods-img-'+this.data.goodsName+tempFile[tempFile.length-2]
     console.log(filePath)
