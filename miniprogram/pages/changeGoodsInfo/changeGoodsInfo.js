@@ -55,10 +55,17 @@ Page({
         goodsName: value
       }).get({
         success: res => {
+          if(res.data.length != 0) {
           this.setData({
-            goods: res.data
-          })
-          console.log('[数据库] [查询记录] 成功: ', res)
+              goods: res.data
+            })
+            console.log('[数据库] [查询记录] 成功: ', res)
+          }else {
+            wx.showToast({
+              title: '没有该商品',
+              icon:'none'
+            })
+          }
         },
         fail: err => {
           wx.showToast({
@@ -70,8 +77,8 @@ Page({
       })
     })
   },
-  selectResult: function (e) {
-    console.log('select result', e.detail)
+  recoveryResult: function (e) {
+    this.getGoodsInfo()
   },
 
   //从数据库获取商品信息

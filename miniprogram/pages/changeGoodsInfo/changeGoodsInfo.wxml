@@ -1,7 +1,7 @@
 <!--miniprogram/pages/changeGoodsInfo/changeGoodsInfo.wxml-->
 <view>
   <view class="page__bd">
-    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+    <mp-searchbar bindclear="recoveryResult" search="{{search}}" bindcancel="recoveryResult"></mp-searchbar>
   </view>
   <view class="page_title">
     <text>左滑对相应商品进行修改</text>
