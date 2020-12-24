@@ -18,7 +18,8 @@ Page({
       text: '确定'
     }],
     currentGoodsID: '',
-    currentImgID:''
+    currentImgID:'',
+
   },
 
   /**
@@ -125,7 +126,9 @@ Page({
     if (index == 0) {
 
     } else if (index == 1) {
-
+      wx.navigateTo({
+        url: '../changeDetails/changeDetails?id=' + e.currentTarget.dataset.id,
+      })
     } else if (index == 2) {
       this.setData({
         dialogShow: true
@@ -178,16 +181,15 @@ Page({
         })
       }, 1000)
     } else {
-      
+      this.setData({
+        dialogShow:false
+      })
     }
   },
   onReady: function () {
  
   },
   onShow:function(){
-    this.setData({
-      goods:[]
-    })
   }
 
 })
