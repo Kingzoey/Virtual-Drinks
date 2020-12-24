@@ -14,7 +14,8 @@ Page({
     }, {
       text: '确定'
     }],
-    currentGoodsID: ''
+    currentGoodsID: '',
+    currentImgID:''
   },
 
   /**
@@ -72,8 +73,10 @@ Page({
   //实现左滑功能
   slideButtonTap: function (e) {
     console.log('slide button tap', e.currentTarget.dataset.id)
+    console.log('slide img id:', e.currentTarget.dataset.img)
     this.setData({
-      currentGoodsID: e.currentTarget.dataset.id
+      currentGoodsID: e.currentTarget.dataset.id,
+      currentImgID:e.currentTarget.dataset.img
     })
     const index = e.detail.index
     if (index == 0) {
@@ -99,9 +102,24 @@ Page({
         title: '正在删除',
       })
       console.log('当前id:' + this.data.currentGoodsID)
+      console.log('当前图片id:' + this.data.currentImgID)
       db.collection('goods').doc(this.data.currentGoodsID).remove().then(res=>{
         console.log(res)
       })
+      wx.cloud.deleteFile({
+        fileList: [this.data.currentImgID],
+        success: res => {
+          // handle success
+          console.log('图片删除成功:'+this.data.currentImgID)
+        },
+        fail: err => {
+          // handle error
+          console.log('图片删除失败!')
+        },
+        complete: res => {
+          // ...
+        }
+      })      
       setTimeout(function () {
         wx.hideLoading()
         wx.showModal({

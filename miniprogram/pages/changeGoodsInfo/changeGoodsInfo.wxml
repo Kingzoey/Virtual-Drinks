@@ -9,7 +9,7 @@
 
   <view class="goodsInfo">
     <view class="weui-cells" >
-      <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" wx:for="{{goods}}" wx:key data-id="{{item._id}}">
+      <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" wx:for="{{goods}}" wx:key data-id="{{item._id}}" data-img="{{item.imgID}}">
           <mp-cell value="{{item.goodsName}}" footer="¥{{item.goodsPrice}}">
             <image slot="icon" src="{{item.imgID}}" class="img" ></image>
           </mp-cell>

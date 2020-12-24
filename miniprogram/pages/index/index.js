@@ -74,14 +74,14 @@ Page({
   },
   
   addUserInfo:function() {
-    if (db.collection) {
+    // if (db.collection) {
       
-    }
-    db.collection('users').add({
-      data:{
-        admin:this.data.admin,
-      },
-    })
+    // }
+    // db.collection('users').add({
+    //   data:{
+    //     admin:this.data.admin,
+    //   },
+    // })
   },
 
   // 上传图片
