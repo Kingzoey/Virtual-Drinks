@@ -8,7 +8,8 @@
   </view>
   <!-- 商品信息输入 -->
   <view class="page_goodsinfo">
-    <mp-form id="form" rules="{{rules}}" models="{{formData}}" >
+
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
       <mp-cells title="商品信息" footer="联系管理员更新模型">
 
         <!-- 商品名称 -->
@@ -36,7 +37,7 @@
         <!-- 上传图片 -->
         <mp-cell>
           <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}"
-            upload="{{uplaodFile}}" files="{{files}}" max-count="1" title="图片上传" tips="图片上传提示" delete="true"></mp-uploader>
+            upload="{{uplaodFile}}" files="{{files}}" max-count="1" title="图片上传" tips="图片上传提示" delete="true" ></mp-uploader>
         </mp-cell>
 
       </mp-cells>
@@ -59,5 +60,6 @@
       </view>
 
     </mp-form>
+
   </view>
 </view>
