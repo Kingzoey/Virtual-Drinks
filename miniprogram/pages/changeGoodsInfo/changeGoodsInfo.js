@@ -7,6 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inputShowed: false,
+    inputVal: "",
+
     goods: [],
     dialogShow: false,
     buttons: [{
@@ -36,6 +39,39 @@ Page({
         console.log(err)
       }
     })
+
+    this.setData({
+      search: this.search.bind(this)
+  })
+  },
+
+  //搜索功能
+  search: function (value) {
+    return new Promise((resolve, reject) => {
+      // setTimeout(() => {
+      //   resolve([{text: '搜索结果', value: 1}, {text: '搜索结果2', value: 2}])
+      // }, 200)
+      db.collection('goods').where({
+        goodsName: value
+      }).get({
+        success: res => {
+          this.setData({
+            goods: res.data
+          })
+          console.log('[数据库] [查询记录] 成功: ', res)
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '查询记录失败'
+          })
+          console.error('[数据库] [查询记录] 失败：', err)
+        }
+      })
+    })
+  },
+  selectResult: function (e) {
+    console.log('select result', e.detail)
   },
 
   //从数据库获取商品信息
@@ -137,8 +173,6 @@ Page({
     } else {
       
     }
-
-
   },
   onReady: function () {
  
@@ -148,6 +182,5 @@ Page({
       goods:[]
     })
   }
-
 
 })
