@@ -10,13 +10,17 @@ page {
 .swiper {
   height: 450rpx;
   width: 100%;
-
+  margin:10rpx;
 }
 .swiper-image {
   height: 100%;
   width: 100%;
 }
 .slide-image{
+  height: 100%;
+  width: 100%;
+}
+.index{
   height: 100%;
   width: 100%;
 }
