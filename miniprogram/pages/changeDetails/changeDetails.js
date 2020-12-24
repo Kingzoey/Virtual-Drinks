@@ -9,6 +9,7 @@ Page({
     currentGoodsID: '',
     currentGoods: [],
     currentImg: [],
+    oldImgID:'',
 
     imageChanged: false,
     nameChanged: false,
@@ -45,6 +46,7 @@ Page({
     this.setData({
       selectFile: this.selectFile.bind(this),
       uplaodFile: this.uplaodFile.bind(this),
+      oldImgID:this.data.currentGoods.imgID
     })
   },
 
@@ -250,6 +252,21 @@ Page({
           },
           success: res => {
             console.log('IMG SUCCESS')
+          }
+        })
+       // wx.cloud.deleteFile
+        wx.cloud.deleteFile({
+          fileList: [this.data.oldImgID],
+          success: res => {
+            // handle success
+            console.log('图片删除成功:'+this.data.oldImgID)
+          },
+          fail: err => {
+            // handle error
+            console.log('图片删除失败!')
+          },
+          complete: res => {
+            // ...
           }
         })
       }
