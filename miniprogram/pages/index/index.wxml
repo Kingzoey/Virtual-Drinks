@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<image src="../../images/index/index.png"  mode="widthFix"></image>
+<image src="{{img}}"  mode="widthFix"></image>
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
   class="swiper">
   <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">

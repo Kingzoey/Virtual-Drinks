@@ -18,5 +18,13 @@ Page({
     inputShowed: false,
     inputVal: "",
 
+    img:[]
+
   },
+
+  onLoad:function() {
+    this.setData({
+      img:'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/index.png'
+    })
+  }
 })
