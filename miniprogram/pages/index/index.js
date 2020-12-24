@@ -5,12 +5,7 @@ const db = wx.cloud.database()
 
 Page({
   data: {
-    imgUrls:["../../images/index/3.png",
-             "../../images/index/2.png",
-             "../../images/index/5.png",
-             "../../images/index/1.png",
-             "../../images/index/4.png",
-            ],
+    imgUrls:[],
     indicatorDots: true, //是否显示面板指示点
     autoplay: true, //是否自动切换
     interval: 3000, //自动切换时间间隔
@@ -24,7 +19,12 @@ Page({
 
   onLoad:function() {
     this.setData({
-      img:'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/index.png'
+      img:'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/index.png',
+      imgUrls:['cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/3.png',
+      'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/2.png',
+      'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/5.png',
+      'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/1.png',
+      'cloud://virtual-drinks-4grqmv5j49ec7114.7669-virtual-drinks-4grqmv5j49ec7114-1304492105/4.png']
     })
   }
 })
