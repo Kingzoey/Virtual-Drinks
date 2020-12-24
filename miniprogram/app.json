@@ -18,7 +18,8 @@
     "pages/ask/ask",
     "pages/askme/askme",
     "pages/changeGoodsInfo/changeGoodsInfo",
-    "pages/addGoods/addGoods"
+    "pages/addGoods/addGoods",
+    "pages/changeDetails/changeDetails"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -32,7 +33,7 @@
   "useExtendedLib": {
     "weui": true
   },
-  "component":true,
+  "component": true,
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
