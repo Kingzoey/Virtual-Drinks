@@ -10,7 +10,7 @@
   <view class="page_goodsinfo">
 
     <mp-form id="form" rules="{{rules}}" models="{{formData}}">
-      <mp-cells title="商品信息" footer="联系管理员更新模型">
+      <mp-cells title="商品信息" footer="联系管理员增加模型">
 
         <!-- 商品名称 -->
         <mp-cell prop="goodsname" title="商品名称" ext-class="page_goodsinfo">

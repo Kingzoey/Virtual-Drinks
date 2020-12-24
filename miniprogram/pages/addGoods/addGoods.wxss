@@ -2,4 +2,5 @@
 .page_title{
   font-size: 18px;
   margin-left: 16px;
+  margin-top: 16px;
 }
