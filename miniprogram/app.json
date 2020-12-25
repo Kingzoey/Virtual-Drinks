@@ -19,7 +19,8 @@
     "pages/askme/askme",
     "pages/changeGoodsInfo/changeGoodsInfo",
     "pages/addGoods/addGoods",
-    "pages/changeDetails/changeDetails"
+    "pages/changeDetails/changeDetails",
+    "pages/contact/contact"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
