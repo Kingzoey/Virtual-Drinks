@@ -1,0 +1,17 @@
+<view class="order_view" wx:for="{{order}}" wx:key data-id="{{item._id}}" bindtap="gotoOrderDetail">
+	<!--
+	<view class="top">
+		<image class="merchantsLOGO" src="{{item.order.merchantsImg}}"></image>
+		<view>
+			<view class="merchantsName">{{item.order.merchantsName}}</view>
+			<view class="listTime">{{item.order.listTime}}</view>
+
+		</view>
+	</view>
+-->
+	<view class="bottom">
+		<span class="foodsName">{{item.foodsName}}</span>
+		<span class="foodsCount">等{{item.foodsCount}}件商品</span>
+		<view class="totalPrice">￥{{item.totalPrice}}</view>
+	</view>
+</view>

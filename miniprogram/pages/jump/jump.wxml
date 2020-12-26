@@ -55,6 +55,30 @@
       </navigator>
     </form>
   </view>
+  <view id="navbar" class="navbar-collapse collapse">
+    <form class="navbar-form navbar-right">
+      <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;"
+        url="../confirmOrder/confirmOrder" redirect>
+        <span>支付</span>
+      </navigator>
+    </form>
+  </view>
+  <view id="navbar" class="navbar-collapse collapse">
+    <form class="navbar-form navbar-right">
+      <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;"
+        url="../order/order" redirect>
+        <span>订单列表</span>
+      </navigator>
+    </form>
+  </view>
+  <view id="navbar" class="navbar-collapse collapse">
+    <form class="navbar-form navbar-right">
+      <navigator class="btn btn-success" style="width: 82px;height: 33.73px;line-height: 33.73px;"
+        url="../orderDetail/orderDetail" redirect>
+        <span>订单系统</span>
+      </navigator>
+    </form>
+  </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

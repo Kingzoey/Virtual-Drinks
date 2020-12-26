@@ -1,0 +1,21 @@
+<view class="container">
+	<view class="top">
+		地址
+	</view>
+
+	<view class="carArrayDetail_view">
+		<view class="carArrayDetail" wx:for="{{carArray}}">
+			<view class="name">{{item.name}}</view>
+			<view>✖{{item.num}}</view>
+			<view>￥{{item.price*item.num}}</view>
+		</view>
+
+		<view class="totalPrice">小计￥<span>{{totalPrice}}</span></view>
+
+	</view>
+
+	<view class="bottom">
+		<view class="price">￥{{totalPrice}}</view>
+		<view class="gotoPay" bindtap="gotoPay">去支付</view>
+	</view>
+</view>
