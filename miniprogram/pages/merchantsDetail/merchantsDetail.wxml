@@ -1,27 +1,18 @@
 <!--pages/order/order.wxml-->
 
 
-<!--tab -->
-<view class="tab border-1px">
-	<view class="tab-item">
-		<a class="{{status==0 ? 'active':''}}" bindtap="tabChange" data-type="0">商品</a>
-	</view>
 
-</view>
-<!--tab -->
-
-<view class="goods" wx:if="{{status==0||item.status==status}}">
-	<scroll-view scroll-y="true" style="height: 500px;" scroll-into-view="{{toView}}" class="foods-wrapper">
-		<view wx:for="{{goods}}" class="food-list food-list-hook" wx:for-index="parentIndex">
+<view class="goods">
+	<scroll-view scroll-y="true" style="height: 500px;" class="foods-wrapper">
+		<view wx:for="{{goods}}" class="food-list food-list-hook" wx:for-index="index">
 				<view class="icon">
-					<image src="{{food.icon}}" style="width: 57px;height: 57px"></image>
+					<image src="{{item.imgID}}" style="width: 57px;height: 57px"></image>
 				</view>
 				<view class="content">
-					<view class="name">{{goods.goodsName}}</view>
-					<view class="desc">{{goods.goodsInfo}}</view>       
+					<view class="name">{{item.goodsName}}</view>
+					<view class="desc">{{item.goodsInfo}}</view>       
 					<view class="price">
-						<view class="now">￥{{goods.goodsPrice}}</view>
-						<view class="old" wx:if="{{food.oldPrice}}">￥{{food.oldPrice}}</view>
+						<view class="now">￥{{item.goodsPrice}}</view>
 					</view>
 
 					<!--cartControl-->

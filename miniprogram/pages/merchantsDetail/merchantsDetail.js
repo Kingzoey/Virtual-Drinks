@@ -12,7 +12,7 @@ Page({
     totalPrice: 0, // 总价格
     totalCount: 0, // 总商品数
     carArray: [], //购物车
-    minPrice: 20, //起送价格
+    minPrice: 0, //起送价格
     payDesc: '',
     deliveryPrice: 4, //配送费
     fold: true,
@@ -42,21 +42,11 @@ Page({
     })
   },
 
-  selectMenu: function (e) {
-    var index = e.currentTarget.dataset.itemIndex;
-    this.setData({
-      toView: 'order' + index.toString()
-    })
-    console.log("toView: ", this.data.toView);
-  },
-
   //移除商品
   decreaseCart: function (e) {
     var index = e.currentTarget.dataset.itemIndex;
-    var parentIndex = e.currentTarget.dataset.parentindex;
-    this.data.goods[parentIndex].foods[index].Count--;
-    var num = this.data.goods[parentIndex].foods[index].Count;
-    var mark = 'a' + index + 'b' + parentIndex;
+    this.data.goods[index].Count--;
+    var mark = 'a' + index ;
     this.data.carArray.forEach(item => {
       if (item.mark == mark) {
         item.num--;
@@ -221,13 +211,7 @@ Page({
     })
   },
 
-  //选择 “商品”、“评论”、“商家”
-  tabChange: function (e) {
-    var showtype = e.target.dataset.type;
-    this.setData({
-      status: showtype,
-    });
-  },
+
 
   /**
    * 生命周期函数--监听页面加载

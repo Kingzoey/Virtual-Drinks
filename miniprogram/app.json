@@ -22,9 +22,10 @@
     "pages/changeDetails/changeDetails",
     "pages/contact/contact",
     "pages/merchantsDetail/merchantsDetail",
+    "pages/shop/index/index",
+    "pages/goodsDetail/goodsDetail",
     "pages/order/order",
-    "pages/orderDetail/orderDetail",
-    "pages/confirmOrder/confirmOrder"
+    "pages/orderDetail/orderDetail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

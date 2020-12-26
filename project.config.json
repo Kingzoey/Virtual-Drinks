@@ -87,6 +87,18 @@
         {
           "name": "pages/merchantsDetail/merchantsDetail",
           "pathName": "pages/merchantsDetail/merchantsDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/index/index",
+          "pathName": "pages/shop/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goodsDetail/goodsDetail",
+          "pathName": "pages/goodsDetail/goodsDetail",
           "scene": null
         }
       ]
