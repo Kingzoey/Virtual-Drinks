@@ -20,7 +20,8 @@
     "pages/changeGoodsInfo/changeGoodsInfo",
     "pages/addGoods/addGoods",
     "pages/changeDetails/changeDetails",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/merchantsDetail/merchantsDetail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -81,6 +81,12 @@
         {
           "name": "发布新商品",
           "pathName": "pages/addGoods/addGoods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/merchantsDetail/merchantsDetail",
+          "pathName": "pages/merchantsDetail/merchantsDetail",
           "scene": null
         }
       ]
