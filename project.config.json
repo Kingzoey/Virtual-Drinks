@@ -99,6 +99,12 @@
         {
           "name": "pages/goodsDetail/goodsDetail",
           "pathName": "pages/goodsDetail/goodsDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/index/index",
+          "pathName": "pages/shop/index/index",
           "scene": null
         }
       ]

@@ -25,7 +25,8 @@
     "pages/shop/index/index",
     "pages/goodsDetail/goodsDetail",
     "pages/order/order",
-    "pages/orderDetail/orderDetail"
+    "pages/orderDetail/orderDetail",
+    "pages/orderMaster/orderMaster"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
