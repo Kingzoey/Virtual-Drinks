@@ -111,6 +111,18 @@
         {
           "name": "商品列表",
           "pathName": "pages/shop/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderDetail/orderDetail",
+          "pathName": "pages/orderDetail/orderDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/orderMaster/orderMaster",
+          "pathName": "pages/orderMaster/orderMaster",
           "scene": null
         }
       ]

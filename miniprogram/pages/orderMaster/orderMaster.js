@@ -30,7 +30,12 @@ Page({
     const db = wx.cloud.database()
     db.collection('order').get({
       success: res => {
-
+        for (var i in res.data) {
+          this.data.order.push(res.data[i]);
+        }
+        this.setData({
+          order: this.data.order.reverse()
+        })
         console.log('[数据库] [查询记录] 成功: ', res)
       },
       fail: err => {
