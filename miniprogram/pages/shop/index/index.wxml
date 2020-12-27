@@ -29,7 +29,7 @@
 						<!-- 数量 -->
 						<view class="value">{{cartData[item._id]}}</view>
 						<!-- 加号 -->
-						<image src="/images/add.png" class="symbol" catchtap="add" data-goods-id="{{item._id}}" />
+						<image src="/images/add.png" class="symbol" bindtap="add" data-goods-id="{{item._id}}"></image>
 					</view>
 				</view>
 			</view>

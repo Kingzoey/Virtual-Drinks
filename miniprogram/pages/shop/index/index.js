@@ -60,7 +60,7 @@ Page({
   add: function(e) {
     // 所点商品id
     const goodsId = e.currentTarget.dataset.goodsId
-     console.log(goodsId);
+    console.log(goodsId);
     // 读取目前购物车数据
     const cartData = this.data.cartData
     // 获取当前商品数量

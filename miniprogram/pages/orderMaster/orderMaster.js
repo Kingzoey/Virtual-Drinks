@@ -28,16 +28,9 @@ Page({
   //从云数据库获取订单列表
   onQuery: function () {
     const db = wx.cloud.database()
-    db.collection('order').where({
-      _openid: "oI5iK5I3iFyzdchd_UV2Cw7YRlno"
-    }).get({
+    db.collection('order').get({
       success: res => {
-        for (var i in res.data) {
-          this.data.order.push(res.data[i]);
-        }
-        this.setData({
-          order: this.data.order.reverse()
-        })
+
         console.log('[数据库] [查询记录] 成功: ', res)
       },
       fail: err => {
@@ -64,7 +57,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      order: []
+    })
+    this.onQuery()
   },
 
   /**
@@ -78,10 +74,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      order: []
-    })
-    this.getOpenid()
+
   },
 
   /**
