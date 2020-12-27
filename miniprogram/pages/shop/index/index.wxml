@@ -16,7 +16,7 @@
 			<!-- food list -->
 			<!-- 主图 -->
 			<view class="food-hd">
-				<image class="thumb" mode="aspectFill" src="{{item.imgID}}" />
+				<image class="thumb" mode="aspectFill" src="{{item.imgID}}" bindtap="toDetail" data-goods-id="{{item._id}}"/>
 			</view>
 			<view class="food-bd">
 				<view class="title">{{item.goodsName}}</view>

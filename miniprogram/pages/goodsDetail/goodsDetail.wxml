@@ -1,20 +1,20 @@
 
 <!--商品幻灯片-->
 <view class="banner" >
-  <image src="{{item.imgID}}"></image>
+  <image src="{{imgID}}"></image>
 </view>
 <!--商品幻灯片 end-->
 <view class="info-price clear">
-  <view class='price'>￥{{item.goodsPrice}} </view>
+  <view class='price'>￥{{goodsPrice}} </view>
 </view>
 <view class="info-title">
-    <text>{{item.goodsName}}</text>
+    <text>{{goodsName}}</text>
 </view>
  
 <view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;">
     <view class="clearfix flex grey gridXt">
-      <text class="sub">种类：{{item.goodsType}}</text>
-      <text class="sub">简介：{{item.goodsInfo}}</text>
+      <text class="sub">种类：{{goodsType}}</text>
+      <text class="sub">简介：{{goodsInfo}}</text>
     </view>
 </view>
 <!--商品详情-->
@@ -24,7 +24,7 @@
   </view>
   <view style='padding:10px 0px;'>
       <view class="wxParse">
-         {{item.goodsComponents}}
+         {{goodsComponents}}
       </view>
     </view>
 </view>

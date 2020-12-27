@@ -5,9 +5,9 @@ const db = wx.cloud.database()
 // 最大行数
 const max_row_height = 5
 // 行高
-const cart_offset = 90
+const cart_offset = 210
 // 底部栏偏移量
-const food_row_height = 49
+const food_row_height = 100
 Page({
   data: {
     cartData: {},
@@ -222,5 +222,14 @@ Page({
       amount: amount.toFixed(2),
       quantity: quantity
     })
+  },
+  toDetail:function(e){
+    console.log(e)
+    var imgId = e.currentTarget.dataset.goodsId;
+    console.log("this id is " + imgId)
+    wx.navigateTo({
+      url: "/pages/goodsDetail/goodsDetail?id=" + imgId   //?id连字符加上imgId
+    });
   }
+
 })

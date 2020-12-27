@@ -10,7 +10,7 @@
   <!-- 普通用户功能-查看购物车、进行中订单 -->
   <view class="normalUser">
     <mp-cells title="我的功能" class="orderCart">
-      <mp-cell link url="../addGoods/addGoods" value="我的购物车" footer="查看"></mp-cell>
+      <mp-cell link url="../shop/index/index" value="我的购物车" footer="查看"></mp-cell>
       <mp-cell link url="../changeGoodsInfo/changeGoodsInfo" value="进行中订单" footer="查看"></mp-cell>
     </mp-cells>
   </view>
