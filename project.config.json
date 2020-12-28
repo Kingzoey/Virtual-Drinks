@@ -123,6 +123,18 @@
         {
           "name": "pages/orderMaster/orderMaster",
           "pathName": "pages/orderMaster/orderMaster",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/index/index",
+          "pathName": "pages/shop/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
           "scene": null
         }
       ]

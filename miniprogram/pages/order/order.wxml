@@ -10,8 +10,8 @@
 	</view>
 -->
 	<view class="bottom">
-		<span class="foodsName">{{item.foodsName}}</span>
-		<span class="foodsCount">等{{item.foodsCount}}件商品</span>
-		<view class="totalPrice">￥{{item.totalPrice}}</view>
+		<span class="foodsName">{{item.order.foodsName}}</span>
+		<span class="foodsCount">等{{item.order.foodsCount}}件商品</span>
+		<view class="totalPrice">￥{{item.order.totalPrice}}</view>
 	</view>
 </view>

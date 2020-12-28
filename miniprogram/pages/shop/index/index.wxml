@@ -46,8 +46,13 @@
 	<view class="fee" bindtap="cascadeToggle">
 		<view wx:if="{{amount}}" class="food-fee">{{amount}}</view>
 	</view>
+	<view class="bottom">
+		<view class="checkout" bindtap="gotoPay">去支付</view>
+	</view>
+	<!--
 	<view class="checkout {{amount  >= 0  ? '' : 'checkout-disabled'}}" bindtap="{{amount  >= 0 ? 'checkout' : ''}}">{{amount  >0 ? '去结算' : '结算'}}</view>
-	
+	-->
+
 </view>
 <!-- 购物车容器 -->
 <view class="modal">

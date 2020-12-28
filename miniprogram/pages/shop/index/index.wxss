@@ -381,3 +381,31 @@
 .modal-body .fee:before {
 	content: '￥';
 }
+
+
+.bottom {
+	
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 118rpx;
+	display: flex;
+	margin-left: 70%;
+}
+
+.bottom .price {
+  background-color: #3C3C3C;
+  color: white;
+  width: 70%;
+  line-height: 100rpx;
+  padding-left: 40rpx;
+}
+
+.bottom .gotoPay {
+  background-color: #00E066;
+  color: white;
+  width: 30%;
+  text-align: center;
+  line-height: 100rpx;
+
+}

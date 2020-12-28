@@ -13,7 +13,14 @@ Page({
     cartData: {},
     cartObjects: [],
     maskVisual: 'hidden',
-    amount: 0
+    amount: 0,
+    
+    carArray: [], //购物车
+    totalPrice: 0,
+    isSelectAddress: false,
+    selectReceivingAddress: [], //选中的收货地址,
+    isSelectReceivingAddress: false,
+    order: {}
   },
   onLoad: function() {
 
@@ -230,6 +237,62 @@ Page({
     wx.navigateTo({
       url: "/pages/goodsDetail/goodsDetail?id=" + imgId   //?id连字符加上imgId
     });
-  }
+  },
+  gotoPay: function () {
+    if (true) {
 
+      //let time = this.formatTime(new Date());
+      //console.log(time);
+
+      //this.data.order.merchantsImg = "/img/xiaoshidai.jpg";
+      //this.data.order.listTime = this.formatTime(new Date());
+      
+      this.data.order.foodsCount = this.data.cartObjects.length;
+      this.data.order.totalPrice = this.data.amount;
+      this.data.order.carArray = this.data.cartObjects[0].goods;
+      this.data.order.foodsName = this.data.cartObjects[0].goods.goodsName;
+      //地址
+
+      const _this = this
+      const db = wx.cloud.database()
+      db.collection('order').add({
+        data: {
+          order: _this.data.order
+        },
+        success: res => {
+          wx.showToast({
+            title: '支付成功！',
+          })
+          wx.removeStorage({
+            key: 'carArray',
+            success(res) {
+              console.log(res)
+            }
+          })
+          wx.removeStorage({
+            key: 'totalPrice',
+            success(res) {
+              console.log(res)
+            }
+          })
+          //地址
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+          console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '新增记录失败'
+          })
+          console.error('[数据库] [新增记录] 失败：', err)
+        }
+      })
+    }
+
+    // wx.showToast({
+    //   title: '支付成功！',
+    // })
+  }
 })
