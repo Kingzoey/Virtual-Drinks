@@ -55,7 +55,7 @@ Page({
     console.log("_id: ", _id)
     wx.setStorageSync('selectOrderNo', _id);
     wx.navigateTo({
-      url: '/pages/orderDetail/orderDetail',
+      url: '',
     })
   },
 
