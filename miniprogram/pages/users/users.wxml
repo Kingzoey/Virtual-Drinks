@@ -11,7 +11,7 @@
   <view class="normalUser">
     <mp-cells title="我的功能" class="orderCart">
       <mp-cell link url="../shop/index/index" value="我的购物车" footer="查看"></mp-cell>
-      <mp-cell link url="../changeGoodsInfo/changeGoodsInfo" value="进行中订单" footer="查看"></mp-cell>
+      <mp-cell link url="../order/order" value="进行中订单" footer="查看"></mp-cell>
     </mp-cells>
   </view>
 
@@ -30,10 +30,9 @@
     </wxs>
 
     <mp-cells wx:if="{{m1.ID(id)}}" title="商家功能"  class="shop">
-      <mp-cell link url="../addFunction/addFunction" value="更新商品模型" footer="请求"></mp-cell>
+      <mp-cell link url="../contact/contact" value="更新商品模型" footer="请求"></mp-cell>
       <mp-cell link url="../addGoods/addGoods" value="发布新商品" footer="发布"></mp-cell>
       <mp-cell link url="../changeGoodsInfo/changeGoodsInfo" value="修改商品信息" footer="查看"></mp-cell>
-      <mp-cell link url="../orderMaster/orderMaster" value="用户订单" footer="查看"></mp-cell>
     </mp-cells>
   </view>
 
