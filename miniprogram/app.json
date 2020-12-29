@@ -11,11 +11,9 @@
     "pages/addGoods/addGoods",
     "pages/changeDetails/changeDetails",
     "pages/contact/contact",
-    "pages/merchantsDetail/merchantsDetail",
     "pages/shop/index/index",
     "pages/goodsDetail/goodsDetail",
     "pages/order/order",
-    "pages/orderDetail/orderDetail",
     "pages/orderMaster/orderMaster",
     "pages/paySuccess/paySuccess"
   ],
