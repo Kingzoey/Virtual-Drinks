@@ -272,8 +272,8 @@ Page({
               }
             })
             //地址
-            wx.switchTab({
-              url: '/pages/index/index',
+            wx.navigateTo({
+              url: '../../paySuccess/paySuccess',
             })
             console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
           },

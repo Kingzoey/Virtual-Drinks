@@ -16,7 +16,8 @@
     "pages/goodsDetail/goodsDetail",
     "pages/order/order",
     "pages/orderDetail/orderDetail",
-    "pages/orderMaster/orderMaster"
+    "pages/orderMaster/orderMaster",
+    "pages/paySuccess/paySuccess"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

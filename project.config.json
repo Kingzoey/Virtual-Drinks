@@ -129,6 +129,13 @@
         {
           "name": "pages/order/order",
           "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付成功",
+          "pathName": "pages/paySuccess/paySuccess",
+          "query": "",
           "scene": null
         }
       ]
