@@ -66,6 +66,9 @@
       }
     ]
   },
+  "navigateToMiniProgramAppIdList": [
+    "wx2744476f6537dfe1"
+  ],
   "usingComponents": {
     "mp-dialog": "weui-miniprogram/dialog/dialog",
     "mp-toptips": "weui-miniprogram/toptips/toptips",

@@ -8,6 +8,7 @@ data: {
   goodsInfo:[],
   goodsComponents:[]
 },
+
 onLoad: function (e) {
   //指定id来加载对应数据
   console.log(e)
