@@ -84,7 +84,7 @@ Page({
    */
   goShopCart:function() {
     wx.navigateTo({
-      url: '../jump/jump',
+      url: '../shop/index/index',
     })
   }
 })
