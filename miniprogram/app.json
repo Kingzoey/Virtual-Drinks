@@ -1,11 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
     "pages/users/users",
     "pages/changeGoodsInfo/changeGoodsInfo",
     "pages/addGoods/addGoods",

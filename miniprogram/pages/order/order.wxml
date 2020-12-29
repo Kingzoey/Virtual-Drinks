@@ -1,4 +1,4 @@
-<view class="order_view" wx:for="{{order}}" wx:key data-id="{{item._id}}" bindtap="gotoOrderDetail">
+<view class="order_view" wx:for="{{order}}" wx:key data-id="{{item._id}}" >
 	<!--
 	<view class="top">
 		<image class="merchantsLOGO" src="{{item.order.merchantsImg}}"></image>
