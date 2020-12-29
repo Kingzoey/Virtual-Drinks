@@ -46,7 +46,6 @@
 	<view class="fee" bindtap="cascadeToggle">
 		<view wx:if="{{amount}}" class="food-fee">{{amount}}</view>
 	</view>
-	<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
 	<view class="bottom">
 		<view class="checkout" bindtap="gotoPay">去支付</view>
 	</view>

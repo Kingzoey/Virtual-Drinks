@@ -239,66 +239,60 @@ Page({
     });
   },
   gotoPay: function () {
-    if(this.data.amount == 0) {
-      this.setData({
-        error:'尚未添加商品！'
-      })
+    if (true) {
 
-      }else{
-        this.data.order.foodsCount = this.data.cartObjects.length;
-        this.data.order.totalPrice = this.data.amount;
-        this.data.order.carArray = this.data.cartObjects[0].goods;
-        this.data.order.foodsName = this.data.cartObjects[0].goods.goodsName;
-        const _this = this
-        const db = wx.cloud.database()
-        db.collection('order').add({
-          data: {
-            order: _this.data.order
-          },
-          success: res => {
-            wx.showToast({
-              title: '支付成功！',
-            })
-            wx.removeStorage({
-              key: 'carArray',
-              success(res) {
-                console.log(res)
-              }
-            })
-            wx.removeStorage({
-              key: 'totalPrice',
-              success(res) {
-                console.log(res)
-              }
-            })
-            //地址
-            wx.switchTab({
-              url: '/pages/index/index',
-            })
-            console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
-          },
-          fail: err => {
-            wx.showToast({
-              icon: 'none',
-              title: '新增记录失败'
-            })
-            console.error('[数据库] [新增记录] 失败：', err)
-          }
-        })
-      }
-      }
       //let time = this.formatTime(new Date());
       //console.log(time);
 
       //this.data.order.merchantsImg = "/img/xiaoshidai.jpg";
       //this.data.order.listTime = this.formatTime(new Date());
       
-      
+      this.data.order.foodsCount = this.data.cartObjects.length;
+      this.data.order.totalPrice = this.data.amount;
+      this.data.order.carArray = this.data.cartObjects[0].goods;
+      this.data.order.foodsName = this.data.cartObjects[0].goods.goodsName;
       //地址
 
-     
+      const _this = this
+      const db = wx.cloud.database()
+      db.collection('order').add({
+        data: {
+          order: _this.data.order
+        },
+        success: res => {
+          wx.showToast({
+            title: '支付成功！',
+          })
+          wx.removeStorage({
+            key: 'carArray',
+            success(res) {
+              console.log(res)
+            }
+          })
+          wx.removeStorage({
+            key: 'totalPrice',
+            success(res) {
+              console.log(res)
+            }
+          })
+          //地址
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+          console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '新增记录失败'
+          })
+          console.error('[数据库] [新增记录] 失败：', err)
+        }
+      })
+    }
 
     // wx.showToast({
     //   title: '支付成功！',
     // })
+  }
 })

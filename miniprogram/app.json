@@ -1,22 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/openapi/openapi",
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room",
-    "pages/jump/jump",
     "pages/users/users",
-    "pages/ask/ask",
-    "pages/askme/askme",
     "pages/changeGoodsInfo/changeGoodsInfo",
     "pages/addGoods/addGoods",
     "pages/changeDetails/changeDetails",
@@ -40,7 +30,6 @@
   "useExtendedLib": {
     "weui": true
   },
-  "component": true,
   "tabBar": {
     "color": "#a9b7b7",
     "selectedColor": "#11cd6e",
@@ -55,7 +44,7 @@
       {
         "selectedIconPath": "images/food2.png",
         "iconPath": "images/food.png",
-        "pagePath": "pages/jump/jump",
+        "pagePath": "pages/shop/index/index",
         "text": "点餐"
       },
       {

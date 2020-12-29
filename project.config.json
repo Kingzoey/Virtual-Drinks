@@ -103,12 +103,6 @@
           "scene": null
         },
         {
-          "name": "pages/shop/index/index",
-          "pathName": "pages/shop/index/index",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "商品列表",
           "pathName": "pages/shop/index/index",
           "query": "",
