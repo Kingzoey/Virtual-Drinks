@@ -33,7 +33,7 @@
   <view class="flex con gridXt tc">
     <view class="add-cart sub f16">
       <button class="add-cart-btn" bindtap='buy'>
-        <navigator target="miniProgram" open-type="navigate" app-id="wx2744476f6537dfe1" path="/pages/index/index" version="develop">3D模型
+        <navigator target="miniProgram" open-type="navigate" app-id="wx2744476f6537dfe1" path="/pages/index/index" version="trial">3D模型
         </navigator>
       </button>
     </view>
