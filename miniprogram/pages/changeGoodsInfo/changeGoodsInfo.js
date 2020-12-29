@@ -124,7 +124,9 @@ Page({
     })
     const index = e.detail.index
     if (index == 0) {
-
+      wx.navigateTo({
+        url: '../goodsDetail/goodsDetail?id=' + e.currentTarget.dataset.id,
+      })
     } else if (index == 1) {
       wx.navigateTo({
         url: '../changeDetails/changeDetails?id=' + e.currentTarget.dataset.id,

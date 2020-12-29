@@ -26,6 +26,10 @@ Page({
 
     this.loadFood()
   },
+  onShow: function() {
+
+    this.loadFood()
+  },
   
   loadFood: function() {
 		// debugger
