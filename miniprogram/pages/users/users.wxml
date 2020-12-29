@@ -20,7 +20,7 @@
     <!-- 函数判断是否是商家 -->
     <wxs module="m1">
       var judgeID = function (id) {
-        if (id == "oI5iK5I3iFyzdchd_UV2Cw7YRlno") {
+        if (id == "oI5iK5I3iFyzdchd_UV2Cw7YRlno" || id == "oI5iK5KiB1_AwgZ6J5umLQv4xyd4") {
           return true;
         } else {
           return false;
